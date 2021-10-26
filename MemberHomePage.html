@@ -81,7 +81,7 @@
     font-style: normal;
   }
   .panel {
-    border: 1px solid #FF8400; 
+    border: 1px solid #f4511e; 
     border-radius:0 !important;
     transition: box-shadow 0.5s;
   }
@@ -89,13 +89,13 @@
     box-shadow: 5px 0px 40px rgba(0,0,0, .2);
   }
   .panel-footer .btn:hover {
-    border: 1px solid #FF8400;
+    border: 1px solid #f4511e;
     background-color: #fff !important;
     color: #f4511e;
   }
   .panel-heading {
     color: #fff !important;
-    background-color: #FF8400 !important;
+    background-color: #f4511e !important;
     padding: 25px;
     border-bottom: 1px solid transparent;
     border-top-left-radius: 0px;
@@ -115,7 +115,7 @@
   }
   .panel-footer .btn {
     margin: 15px 0;
-    background-color: #FF8400;
+    background-color: #f4511e;
     color: #fff;
   }
   .navbar {
@@ -196,22 +196,18 @@
       background-color:white; color: #05B2E5; font-weight: bold; border: 0px; padding: 17px; cursor: pointer;  
   }
   
-  th, td {
-      padding-left: 30px;
-      padding-right: 30px;
-  }
-  th {
-      color: darkcyan;
-      font-weight: bold;
-      text-align: center;
-      border-bottom: 2px solid darkcyan;
+  .button_UserName{
+      cursor: default;
+      background-color: #02A4D3;
+      padding: 0.1px;
+      color: white;
   }
   </style>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
     
-    <script> 
-         function con(){var val = confirm("Logging out now..."); if (val==true)return true; else return false; }
+     <script> 
+         function MemberHomePageLogout(){var val = confirm("Logging out now..."); if (val==true)return true; else return false; }
     </script>
 
 <nav class="navbar navbar-default navbar-fixed-top">
@@ -226,22 +222,22 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-          <li><a href="MemberHomePage.html">HOME</a></li>
-          <li><a href="#myPage">My Profile</a></li>
-          <li><a href="#borrowings">Borrowings</a></li>
-          <li><a href="#history">History</a></li>
-        <li><a href="#contact">My Details</a></li>
-        <li style="background-color: #6CEC19; " ><form method="post" action="index.html"><button class="button_logout"  type="submit" onclick="return(con());">LOGOUT</button></form></li>
+          <li><a href="#myPage">HOME</a></li>
+        <li><a href="#about">ABOUT US</a></li>
+        <li><a href="#contact">CONTACT US</a></li>
+        <li><a href="MemberUser.html">BACK TO PROFILE</a></li>
+        <li style="background-color: #6CEC19; " ><form method="post" action="index.html"><button class="button_logout"  type="submit" onclick="return(MemberHomePageLogout());">LOGOUT</button></form></li>
       </ul>
     </div>
   </div>
 </nav>
-
+    
 <div class="jumbotron text-center">
     <h1> <img src="Icons/300.gif" width="150" height="150"> </h1>
-    <h3>Hi, Rochana Chathuranga</h3>
-  <form>      
-        <table border="0" align="center" > <tr>
+    <h1><strong>L</strong>ibrary <strong>M</strong>anagement <strong>S</strong>ystem</h1> 
+  <p>Knowledge is never complete.</p> 
+  <form>
+      <table border="0" align="center" > <tr>
                 <td style=" padding-right: 20px; padding-left: 20px;"><input type="radio" id="BookTitle" name="SearchKey" value="1">
                     <label for="html">Search by Title</label> </td>
                 <td style=" padding-right: 20px; padding-left: 20px; "><input type="radio" id="BookAuthor" name="SearchKey" value="2">
@@ -249,16 +245,16 @@
                 <td style=" padding-right:  20px; padding-left: 20px;"><input type="radio" id="BookCategory" name="SearchKey" value="3">
                     <label for="javascript">Search by Category</label></td></tr>
         </table>
-       <div class="input-group">
-      <input type="text" class="form-control" size="50" placeholder="Search a book" required>
+    <div class="input-group">
+      <input type="text" class="form-control" size="50" placeholder="Enter a book title" required>
       <div class="input-group-btn">
         <button type="button" class="btn btn-danger">Search</button>
       </div>
     </div>
   </form>
 </div>
-
-<div id="pricing" class="container-fluid">
+    
+    <div id="pricing" class="container-fluid">
 
   <div class="row slideanim">
     <div class="col-sm-4 col-xs-12">
@@ -315,85 +311,107 @@
   </div>
 </div>
 
-    <!-- Container (Borrowings Section) -->
-    <div id="borrowings" class="container-fluid text-center">
-  <h2>Currently Borrowed</h2>
-  <br>
-  <div class="row slideanim" align="center">
-      <table border="0">
-          <tr>
-              <th>BCN</th><th>ISBN</th><th>Book Name</th><th>Borrowed Date</th><th>Date to be Returned</th><th>Over-due</th>
-          </tr>
-          <tr><td>10001</td><td>1002-2312-8889</td><td>Hansel and Gretal</td><td>12-12-2019</td><td>24-12-2019</td><td>2</td></tr>
-          <tr><td>10001</td><td>1002-2312-8889</td><td>Hansel and Gretal</td><td>12-12-2019</td><td>24-12-2019</td><td>2</td></tr>
-          <tr><td>10001</td><td>1002-2312-8889</td><td>Hansel and Gretal</td><td>12-12-2019</td><td>24-12-2019</td><td>2</td></tr>
-          <tr><td>10001</td><td>1002-2312-8889</td><td>Hansel and Gretal</td><td>12-12-2019</td><td>24-12-2019</td><td>2</td></tr>
-      </table>
+<!-- Container (About Section) -->
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2>About the Library</h2><br>
+      <h4>Matrix web-based library management system engages users by providing self-service functionality and encouraging collaboration. It reduces the pressure on library staff and increases access to knowledge from any device including mobile smart phones and tablets. </h4><br>
+      <p>Members can register themselves and gain access to this library portal at anytime, from anywhere. They gain the facility of e-Library-Browsing, which means browsing and reserving books via the internet. </p>
       
     </div>
-</div>
-    
-
-   <!-- Container (History Section) -->
-    <div id="history" class="container-fluid text-center">
-  <h2>Borrowed History</h2>
-  <br>
-  <div class="row slideanim" align="center" style=" height: 400px; overflow-y: scroll; ">
-      <table border="0">
-          <tr>
-              <th>BCN</th><th>Book Name</th><th>Author</th><th>Borrowed Date</th><th>Date to be Returned</th>
-          </tr>
-          <tr><td>10001</td><td>Hansel and Gretal</td><td>Carlos Varga</td><td>12-12-2019</td><td>24-12-2019</td></tr>
-          <tr><td>10001</td><td>Hansel and Gretal</td><td>Carlos Varga</td><td>12-12-2019</td><td>24-12-2019</td></tr>
-          <tr><td>10001</td><td>Hansel and Gretal</td><td>Carlos Varga</td><td>12-12-2019</td><td>24-12-2019</td></tr>
-          <tr><td>10001</td><td>Hansel and Gretal</td><td>Carlos Varga</td><td>12-12-2019</td><td>24-12-2019</td></tr>
-      </table>
-      
+    <div class="col-sm-4">
+        <span><img src="Icons/Intro.png" width="350" height="300" style="border-radius: 170px;  " alt=""/></span>
     </div>
-</div>
-    
-    
-<!-- Container (Contact Section) -->
-<div id="contact" class="container-fluid bg-grey">
-  <h2 class="text-center">Profile Details</h2>
-  <div class="row"> <div class="col-sm-2"> </div>
-    <div class="col-sm-8 slideanim" align="center">
-      <div class="row">
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="firstname" name="firstname" type="text" required value="Rochana">
-        </div>
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="lastname" name="lastname" type="text" required value="Chathuranga">
-        </div>
-      </div>
-         <div class="row">
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="nic" name="nic" type="text" required value="980803210V">
-        </div>
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="dob" name="dob" type="date" required value="1998-03-20">
-        </div>
-      </div>
-        <input class="form-control" id="address" name="address" type="text" required value="47, Ganepola, Kotugoda."> <br>
-        <input class="form-control" id="address" name="address" type="text" required value="0774864804"> <br>
-      <div class="row">
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="email" name="email" type="email" required value="lmrchathuranga@gmail.com">
-        </div>
-        <div class="col-sm-6 form-group">
-          <input class="form-control" id="password" name="password" type="password" required value="Roch123">
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-sm-12 form-group">
-          <button class="btn btn-default pull-right" type="submit">Update</button>
-        </div>
-      </div>
-    </div> <div class="col-sm-2"> </div>
   </div>
 </div>
 
-<!-- Image of location/map -->
+
+<!-- Container (Services Section) -->
+<div id="services" class="container-fluid text-center">
+  <h2>SERVICES</h2>
+  <h4>What we offer</h4>
+  <br>
+  <div class="row slideanim">
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-time logo-small"></span>
+      <h4>24x7 Access</h4>
+      <p>Any-time, Any-place, Any-device</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-thumbs-up logo-small"></span>
+      <h4>User Friendly</h4>
+      <p>Library on your palm</p>
+    </div>
+    <div class="col-sm-4">
+      <span class="glyphicon glyphicon-usd logo-small"></span>
+      <h4>Cost Effective</h4>
+      <p>A relief to your pocket</p>
+    </div>
+  </div>
+</div>
+
+<!-- Container (Portfolio Section) -->
+<div id="portfolio" class="container-fluid text-center bg-grey">
+  <h2>Top 3 of the week</h2><br>
+    <div class="row text-center slideanim">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+          <h1 style="color: red;"><b>#1</b></h1>
+        <img src="Books/a.jpg" style=" width: 380px; height: 600px; " alt=""/>
+        <p><strong>Jungle Book</strong></p>
+        <p>Anie Clark</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+          <h1 style="color: red;"><b>#2</b></h1>
+        <img src="Books/b.jpeg"  style=" width: 380px; height: 600px; " alt=""/>
+        <p><strong>Dark Minds</strong></p>
+        <p>Randy Mc Millan</p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+          <h1 style="color: red;"><b>#3</b></h1>
+        <img src="Books/c.jpg"  style=" width: 380px; height: 600px; " alt=""/>
+        <p><strong>Hobbit</strong></p>
+        <p>Thain Orkanshield</p>
+      </div>
+    </div>
+  </div><br>
+  
+  
+
+<!-- Container (Contact Section) -->
+<div id="contact" class="container-fluid bg-grey">
+  <h2 class="text-center">CONTACT</h2>
+  <div class="row">
+    <div class="col-sm-5" style=" text-align: left; ">
+      <p>Contact us and we'll get back to you within 24 hours.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> University of Moratuwa, Sri Lanka.</p>
+      <p><span class="glyphicon glyphicon-phone"></span> +00 1515151515</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> matrixlms@uom.lk</p>
+    </div>
+    <div class="col-sm-7 slideanim">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="message" name="message" placeholder="Message" rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-default pull-right" type="submit">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <footer class="container-fluid text-center">
   <a href="#myPage" title="To Top">

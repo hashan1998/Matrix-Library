@@ -31,7 +31,7 @@
     margin-bottom: 30px;
   }  
   .jumbotron {
-    background-color: #05B2E5;
+    background-color: #02A4D3;
     color: #fff;
     padding: 100px 25px;
     font-family: Montserrat, sans-serif;
@@ -120,7 +120,7 @@
   }
   .navbar {
     margin-bottom: 0;
-    background-color: #05B2E5;
+    background-color: #02A4D3;
     z-index: 9999;
     border: 0;
     font-size: 12px !important;
@@ -237,13 +237,19 @@
     <div class="jumbotron text-center">
     <h1><strong>L</strong>ibrary <strong>M</strong>anagement <strong>S</strong>ystem</h1> 
   <p>Knowledge is never complete.</p> 
-  <form action="" method="" >
-    <table align="center">
-        <tr><input type="email" name="email"   placeholder=" Enter Email Address" required style="color:darkslategray; width:400px; height:45px; padding: 5px; border-radius: 10px; opacity: 0.86; " > <br>
-    </tr><tr><br><input type="password" name="password"  placeholder="Enter Password" required style="color:darkslategray; width:400px; height:45px; padding: 5px; border-radius: 10px; opacity: 0.86;" >
-  </tr><tr>
-    <br><br><button type="submit" class='loginbutton'>L O G I N</button></tr>
-  <tr><p>Forgotten Password...</p></tr>
+  <form action="" method="post">
+    <table border="0" align="center">
+                <tr>
+                    <td style=" padding-right: 15px; padding-left: 15px; text-align: center;"><input type="radio" id="LoginAsAdmin" name="LoginAs" value="1" required="">
+                    <label for="AsAdmin">As Admin</label> </td>
+                    <td style=" padding-right: 15px; padding-left: 15px; text-align: center; "><input type="radio" id="LoginAsMember" name="LoginAs" value="2" required="">
+                    <label for="AsMember">As Member</label></td>
+               </tr>
+               <tr><td colspan="2"><input type="email" name="email"   placeholder=" Enter Email Address" required style="color:darkslategray; width:400px; height:45px; padding: 5px; border-radius: 10px; opacity: 0.86; " > <br>
+                   </td></tr><tr><td colspan="2"><br><input type="password" name="password"  placeholder="Enter Password" required style="color:darkslategray; width:400px; height:45px; padding: 5px; border-radius: 10px; opacity: 0.86;" >
+                   </td></tr><tr><td colspan="2">
+                       <br><br><button type="submit" class='loginbutton'>L O G I N</button></td></tr>
+               <tr><td colspan="2"><br><p style=" font-size: 10px; font-style: italic;">Forgotten Password...</p></td></tr>
    </table>  
   </form>
 </div>
